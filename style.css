@@ -8,7 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* Reset e base */
 body {
   font-family: 'Poppins', sans-serif;
@@ -97,7 +96,6 @@ body {
 .quem-somos-container {
   display: flex;
   width: 100vw;
-  /* Usa toda a largura da viewport */
   flex-wrap: nowrap;
   align-items: stretch;
 }
@@ -190,7 +188,6 @@ body {
   padding: 0 20px;
 }
 
-
 .card-servico {
   background-color: white;
   border-radius: 12px;
@@ -250,7 +247,6 @@ body {
 }
 
 .conteudo-solucoes {
-
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -260,7 +256,6 @@ body {
 }
 
 .texto-solucoes {
-
   flex: 1 1 350px;
 }
 
@@ -288,7 +283,6 @@ body {
 }
 
 .lista-servicos {
-
   list-style: none;
   padding-left: 0;
   font-size: 1rem;
@@ -335,7 +329,6 @@ body {
   border-radius: 8px;
 }
 
-
 .contato-whatsapp {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('/img/Contato-fundo.jpeg') center/cover no-repeat;
@@ -348,22 +341,17 @@ body {
 .texto-topo {
   font-size: 1.3em;
   color: #f4f4f4;
-  /* Azul escuro para destacar */
-  font-weight: 500;
 }
-
 
 h2 {
   font-size: 2.5em;
   margin: 10px 0;
   color: #0056b3;
-  /* Azul para manter uniformidade */
 }
 
 .empresa {
   font-weight: 600;
   color: #0084b4;
-  /* Azul mais suave para o nome da empresa */
 }
 
 .descricao {
@@ -377,7 +365,6 @@ h2 {
   justify-content: center;
   gap: 30px;
   align-items: stretch;
-  /* Alinha os itens para ter a mesma altura */
 }
 
 .whatsapp-card {
@@ -390,26 +377,21 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Garante que os conteúdos dentro do card estejam bem distribuídos */
 }
-
 
 .whatsapp-card:hover {
   transform: translateY(-5px);
-  /* Efeito de hover para dar interatividade */
 }
 
 .whatsapp-card h3,
 .whatsapp-card p {
   margin: 0 0 10px 0;
-  /* Remove margens extras */
 }
 
 .botao-whatsapp {
   display: inline-block;
   padding: 10px 20px;
   background-color: #075E54;
-  /* Cor verde do WhatsApp */
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -418,7 +400,6 @@ h2 {
 
 .botao-whatsapp:hover {
   background-color: #25D366;
-  /* Cor escura do WhatsApp */
 }
 
 /* RODAPÉ */
@@ -427,6 +408,53 @@ h2 {
   padding: 20px;
   background-color: #0b1b3b;
   color: #f6f1e6;
+}
+
+@media (max-width: 768px) {
+  .quem-somos-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-quem-somos {
+    padding: 40px 20px;
+    flex: none;
+    width: 100%;
+  }
+
+  .imagem-quem-somos {
+    width: 100%;
+    height: auto;
+    display: none;
+    /* A imagem será ocultada em telas pequenas */
+  }
+
+  .texto-quem-somos .titulo-cor,
+  .texto-quem-somos .texto-cor {
+    font-size: 2.2rem;
+    /* Ajuste no tamanho da fonte para telas menores */
+  }
+
+  .qualidades {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .qualidades li {
+    font-size: 1rem;
+    /* Ajuste no tamanho da fonte */
+    padding: 10px;
+    border-radius: 8px;
+    /* Mantém o estilo mas com ajustes de tamanho */
+  }
+
+  .qualidades li {
+    width: 100%;
+    /* Para que os itens ocupem toda a largura no mobile */
+  }
 }
 
 @media (max-width: 768px) {
@@ -450,5 +478,23 @@ h2 {
       "img2"
       "img3"
       "img4";
+  }
+}
+
+/* Escondendo a imagem na seção 'Quem Somos' no mobile */
+@media (max-width: 768px) {
+  #quem-somos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #quem-somos .content {
+    max-width: 100%;
+  }
+
+  #quem-somos img {
+    display: none;
   }
 }
