@@ -11,10 +11,11 @@ html {
 
 /* Reset e base */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 /* NAVBAR */
@@ -271,7 +272,7 @@ body {
 }
 
 .texto-solucoes h2 .destaque {
-  color: #4eaa4a;
+  color: #0056b3;
   font-weight: bold;
 }
 
@@ -331,10 +332,94 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  aspect-ratio: 4/3;
+  border-radius: 8px;
 }
 
+
+.contato-whatsapp {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/img/Contato-fundo.jpeg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+}
+
+.texto-topo {
+  font-size: 1.3em;
+  color: #f4f4f4;
+  /* Azul escuro para destacar */
+  font-weight: 500;
+}
+
+
+h2 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #0056b3;
+  /* Azul para manter uniformidade */
+}
+
+.empresa {
+  font-weight: 600;
+  color: #0084b4;
+  /* Azul mais suave para o nome da empresa */
+}
+
+.descricao {
+  font-size: 1.1em;
+  color: #f4f4f4;
+  margin-bottom: 30px;
+}
+
+.whatsapp-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: stretch;
+  /* Alinha os itens para ter a mesma altura */
+}
+
+.whatsapp-card {
+  background-color: none;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Garante que os conteúdos dentro do card estejam bem distribuídos */
+}
+
+
+.whatsapp-card:hover {
+  transform: translateY(-5px);
+  /* Efeito de hover para dar interatividade */
+}
+
+.whatsapp-card h3,
+.whatsapp-card p {
+  margin: 0 0 10px 0;
+  /* Remove margens extras */
+}
+
+.botao-whatsapp {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #075E54;
+  /* Cor verde do WhatsApp */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.botao-whatsapp:hover {
+  background-color: #25D366;
+  /* Cor escura do WhatsApp */
+}
 
 /* RODAPÉ */
 .rodape {
@@ -342,5 +427,28 @@ body {
   padding: 20px;
   background-color: #0b1b3b;
   color: #f6f1e6;
-  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .texto-quem-somos {
+    padding: 40px 20px;
+  }
+
+  .nav-list {
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .galeria-solucoes {
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3"
+      "img4";
+  }
 }
