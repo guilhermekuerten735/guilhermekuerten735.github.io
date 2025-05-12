@@ -305,7 +305,7 @@ body {
 
 .lista-servicos li::before {
   content: "✔ ";
-  color: #4eaa4a;
+  color: #0056b3;
   font-weight: bold;
   margin-right: 6px;
 }
