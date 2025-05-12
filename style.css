@@ -59,6 +59,30 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f4e5b1;
+  transition: width 0.3s ease;
+}
+
+.nav-list li a:hover {
+  transform: scale(1.1);
+  /* Zoom */
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+  /* Linha animada aparece */
 }
 
 .whatsapp-box {
@@ -143,6 +167,14 @@ body {
   border-radius: 10px;
   display: inline-block;
   width: fit-content;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.qualidades li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+  /* destaque maior no hover */
 }
 
 /* IMAGEM DIREITA EM TODA ALTURA */
